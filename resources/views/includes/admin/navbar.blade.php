@@ -12,8 +12,8 @@
                             <div class="user-nav d-sm-flex d-none"><span class="user-name">{{ Auth::user()->name }}</span><span class="user-status text-muted">{{ Auth::user()->occupation }}</span></div><span><img class="round" src="{{ url('admin/app-assets/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right pb-0">
-                            <a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i>Profile</a>
-                            <div class="dropdown-divider mb-0"></div>
+{{--                            <a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i>Profile</a>--}}
+{{--                            <div class="dropdown-divider mb-0"></div>--}}
                             @auth
                                 <a class="dropdown-item" href="{{ url('/logout') }}"><i class="bx bx-power-off mr-50"></i> Logout</a>
                             @endauth

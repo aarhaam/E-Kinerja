@@ -44,11 +44,11 @@
 {{--                                                                    </li>--}}
                                                                 </ul>
                                                             </div>
-                                                            <button class="btn btn-sm d-none d-sm-block float-right btn-light-primary">
-                                                                <i class="cursor-pointer bx bx-edit font-small-3 mr-50"></i><span>Edit</span>
-                                                            </button>
-                                                            <button class="btn btn-sm d-block d-sm-none btn-block text-center btn-light-primary">
-                                                                <i class="cursor-pointer bx bx-edit font-small-3 mr-25"></i><span>Edit</span></button>
+{{--                                                            <button class="btn btn-sm d-none d-sm-block float-right btn-light-primary">--}}
+{{--                                                                <i class="cursor-pointer bx bx-edit font-small-3 mr-50"></i><span>Edit</span>--}}
+{{--                                                            </button>--}}
+{{--                                                            <button class="btn btn-sm d-block d-sm-none btn-block text-center btn-light-primary">--}}
+{{--                                                                <i class="cursor-pointer bx bx-edit font-small-3 mr-25"></i><span>Edit</span></button>--}}
                                                         </div>
                                                     </div>
                                                 </div>
