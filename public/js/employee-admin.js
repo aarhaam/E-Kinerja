@@ -33,12 +33,14 @@ $(document).ready(function() {
             {"data" : "occupation"},
             {"data" : "employee_id",
                 render: function(data, type, row) {
-                    return `<a id="editEmployee" class=" btn btn-md btn-info" data-id='`+data +`' style="margin: 5px 0px;"><i class="bx bx-message-square-edit"></i></a>
-                            <a id="deleteEmployee" class=" btn btn-md btn-danger" data-id='`+data +`' ><i class="bx bx-trash"></i></a>`;
+                    return `<a id="editEmployee" class=" btn btn-md btn-info" data-id='`+data +`' style="margin: 2px 0px;"><i class="bx bx-message-square-edit"></i></a>
+                            <a id="deleteEmployee" class=" btn btn-md btn-danger" data-id='`+data +`' style="margin: 2px 0px;"><i class="bx bx-trash"></i></a>`;
                 }
             },
         ]
     });
+
+    //employee
 
     $('#addEmployee').click(function(){
         $('#modalInput').modal('show');

@@ -9,7 +9,7 @@ class ProgressWork extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'employee_id', 'indicator_id', 'description', 'date'
+        'employee_id', 'indicator_id', 'description', 'date', 'grade'
     ];
 
     public function user(){

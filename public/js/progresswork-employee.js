@@ -22,6 +22,23 @@ $(document).ready(function(){
             {"data" : "indicator_work.name_indicator"},
             {"data" : "description"},
             {"data" : "date"},
+            {"data" : "grade",
+                render: function(data, row){
+                    if(data === 1){
+                        return 'Sangat Kurang 😞 ️';
+                    } else if (data === 2){
+                        return 'Kurang 🙁 ️';
+                    } else if (data === 3){
+                        return 'Cukup 🙂 ️';
+                    } else if (data === 4){
+                        return 'Baik 🤓 ';
+                    } else if (data === 5){
+                        return 'Sangat Baik 😍 ';
+                    } else {
+                        return 'Belum ada penilaian';
+                    }
+                }
+            },
             {"data" : "id",
                 render: function(data, row){
                     return `<a id="editProgress" class=" btn btn-md btn-info" data-id='`+data +`' style="margin: 5px 0px;"><i class="bx bx-message-square-edit"></i></a>
@@ -76,6 +93,7 @@ $(document).ready(function(){
                     $('#formProgressWork').trigger("reset");
                     $('#modalInput').trigger("reset");
                     $('#modalInput').modal("hide");
+                    $('#id').val("");
                     $('#table-progress').DataTable().ajax.reload();
                     Swal.fire("Berhasil", data.message, "success");
                     $('#method').val('POST');

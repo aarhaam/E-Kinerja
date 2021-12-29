@@ -45,8 +45,18 @@
                 </li>
                 <li class="nav-item"><a href="{{ url('/admin-indicator') }}"><i class="bx bx-line-chart"></i><span class="menu-title text-truncate" data-i18n="Karyawan">Indikator Karyawan</span></a>
                 </li>
+                <li class="nav-item"><a href="{{ url('/admin-structural') }}"><i class="bx bxs-user-badge"></i><span class="menu-title text-truncate" data-i18n="Karyawan">Struktural</span></a>
+                </li>
             </ul>
         @else
+            @if(isset($head))
+                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+                    <li class="nav-item"><a href="{{ url('/employee-dashboard') }}"><i class="bx bx-home"></i><span class="menu-title text-truncate" data-i18n="Karyawan">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item"><a href="{{ url('/employee-subordinate-performance') }}"><i class="bx bx-chart"></i><span class="menu-title text-truncate" data-i18n="Karyawan">Kinerja Bawahan</span></a>
+                    </li>
+                </ul>
+            @endif
         @endif
 
     </div>

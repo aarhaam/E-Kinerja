@@ -880,6 +880,7 @@ $(window).on("load", function () {
     });
 
     $('#table-activity').DataTable({
+        // serverSide: true,
         autoWidth: false,
         responsive : true,
         processing: true,
@@ -899,5 +900,4 @@ $(window).on("load", function () {
             {"data" : "date"}
         ]
     });
-
 });

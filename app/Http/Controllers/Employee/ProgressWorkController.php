@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Http\Controllers\Controller;
+use App\Models\HeadOfSubordinate;
 use App\Models\IndicatorWork;
 use App\Models\ProgressWork;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProgressWorkController extends Controller
 {
@@ -23,9 +26,11 @@ class ProgressWorkController extends Controller
 
     public function index()
     {
+        $head = HeadOfSubordinate::where('head', '=', Auth::user()->employee_id)->first();
         $indicator = IndicatorWork::where('employee_id', '=', Auth::user()->employee_id)->get();
         return view('employee.progress-work', [
-            'data' => $indicator
+            'data' => $indicator,
+            'head' => $head
         ]);
     }
 
@@ -154,4 +159,14 @@ class ProgressWorkController extends Controller
            'message' => 'Data aktivitas berhasil dihapus'
         ]);
     }
+
+
+    //head controller
+//    public function progressWork()
+//    {
+//        $employee = HeadOfSubordinate::with('subordinate')->where('head', '=', Auth::user()->employee_id)->get();
+//        return json_encode([
+//            'data' => $employee
+//        ]);
+//    }
 }

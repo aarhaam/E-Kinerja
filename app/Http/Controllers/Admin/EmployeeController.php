@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\HeadOfSubordinate;
 use App\Models\IndicatorWork;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use function response;
@@ -27,7 +29,10 @@ class EmployeeController extends Controller
 
     public function index()
     {
-        return view('admin.employee-admin');
+        $employee = User::where('status', '=', 'employee')->get();
+        return view('admin.employee-admin', [
+            'data' => $employee
+        ]);
     }
 
     /**
@@ -73,6 +78,11 @@ class EmployeeController extends Controller
                'message' => 'Data karyawan berhasil diinput'
             ]);
         }
+    }
+
+    public function storeSubordinate(Request $request, $employee_id)
+    {
+
     }
 
     /**

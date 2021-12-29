@@ -21,6 +21,7 @@ class CreateProgressWorksTable extends Migration
             $table->foreign('indicator_id')->references('id')->on('indicator_works');
             $table->text('description');
             $table->date('date');
+            $table->integer('grade')->nullable();
             $table->timestamps();
         });
     }

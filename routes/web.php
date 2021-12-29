@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function(){
     Route::put('/update-employee/{id}', [\App\Http\Controllers\Admin\EmployeeController::class, 'update']);
     Route::delete('/delete-employee/{id}', [\App\Http\Controllers\Admin\EmployeeController::class, 'destroy']);
 
+
     //indicator-admin
     Route::get('/admin-indicator', [App\Http\Controllers\Admin\IndicatorWorkController::class, 'index']);
     Route::get('/indicator-data', [App\Http\Controllers\Admin\IndicatorWorkController::class, 'show']);
@@ -46,6 +47,14 @@ Route::middleware('auth')->group(function(){
     Route::post('/add-indicator', [App\Http\Controllers\Admin\IndicatorWorkController::class, 'store']);
     Route::put('/update-indicator/{id}', [App\Http\Controllers\Admin\IndicatorWorkController::class, 'update']);
     Route::delete('/delete-indicator/{id}', [App\Http\Controllers\Admin\IndicatorWorkController::class, 'destroy']);
+
+    //subordinate-admin
+    Route::get('/admin-structural', [App\Http\Controllers\Admin\SubordinateController::class, 'index']);
+    Route::get('/head-data', [App\Http\Controllers\Admin\SubordinateController::class, 'headData']);
+    Route::get('/get-subordinate-data/{id}', [App\Http\Controllers\Admin\SubordinateController::class, 'edit']);
+    Route::post('/add-subordinate', [App\Http\Controllers\Admin\SubordinateController::class, 'store']);
+    Route::put('/update-subordinate-head/{id}', [App\Http\Controllers\Admin\SubordinateController::class, 'update']);
+    Route::delete('/delete-subordinate/{id}', [App\Http\Controllers\Admin\SubordinateController::class, 'destroy']);
 
     //employee-activity
     Route::get('/employee-dashboard', [App\Http\Controllers\Employee\ProgressWorkController::class, 'index']);
@@ -59,4 +68,10 @@ Route::middleware('auth')->group(function(){
     //indicator
     Route::get('/employee-indicator', [App\Http\Controllers\Employee\ProgressWorkController::class, 'indicatorData']);
 
+
+    //employee-subordinate-performance
+    Route::get('/employee-subordinate-performance', [App\Http\Controllers\Employee\SubordinatePerformanceController::class, 'index']);
+    Route::get('/subordinate-performance-data', [App\Http\Controllers\Employee\SubordinatePerformanceController::class, 'show']);
+    Route::get('/subordinate-performance-data/{id}', [App\Http\Controllers\Employee\SubordinatePerformanceController::class, 'performance']);
+    Route::put('/subordinate-grade-data', [App\Http\Controllers\Employee\SubordinatePerformanceController::class, 'update']);
 });

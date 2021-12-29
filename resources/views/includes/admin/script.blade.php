@@ -26,4 +26,5 @@
 <script src="{{ url('admin/app-assets/js/core/app.js') }}"></script>
 <script src="{{ url('admin/app-assets/js/scripts/components.js') }}"></script>
 <script src="{{ url('admin/app-assets/js/scripts/footer.js') }}"></script>
+{{--<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>--}}
 <!-- END: Theme JS-->

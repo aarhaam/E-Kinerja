@@ -55,4 +55,9 @@ class User extends Authenticatable
     public function indicatorWork(){
         return $this->hasMany(IndicatorWork::class, 'employee_id', 'employee_id');
     }
+
+    public function headOfSubordinate()
+    {
+        return $this->belongsToMany(HeadOfSubordinate::class, 'head_of_subordinates', 'head', 'head', 'employee_id', 'employee_id');
+    }
 }
