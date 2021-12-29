@@ -46,10 +46,10 @@ class SubordinateController extends Controller
                 'subordinate' => 'required'
             ]);
 
-            $subordinate = HeadOfSubordinate::where('subordinate', '=', $data['subordinate'])->first();
-            $head = HeadOfSubordinate::where('subordinate', '=', $data['head'])->first();
-
-            if($data && $subordinate == null && $head == null){
+//            $subordinate = HeadOfSubordinate::where('subordinate', '=', $data['subordinate'])->first();
+//            $head = HeadOfSubordinate::where('subordinate', '=', $data['head'])->first();
+            //&& $subordinate == null && $head == null
+            if($data ){
                 HeadOfSubordinate::create([
                     'head' => $data['head'],
                     'subordinate' => $data['subordinate']
@@ -121,9 +121,9 @@ class SubordinateController extends Controller
 
 
 //            $subordinate = HeadOfSubordinate::where('head', '=', $data['subordinate'])->first();
-            $head = HeadOfSubordinate::where('subordinate', '=', $data['head'])->first();
+//            $head = HeadOfSubordinate::where('subordinate', '=', $data['head'])->first();
 
-            if($data && $head == null){
+            if($data){
                 $subordinateData->update([
                    'head' => $data['head'],
 //                   'subordinate' => $data['subordinate']

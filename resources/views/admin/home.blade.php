@@ -308,38 +308,43 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
-                    <div class="row text-center">
+                    <div class="row">
                         <!-- Task Card Starts -->
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="card widget-todo">
-                                        <div class="card-header border-bottom d-flex justify-content-between align-items-center flex-wrap">
-                                            <h4 class="card-title d-flex mb-25 mb-sm-0">
-                                                <i class='bx bx-check font-medium-5 pl-25 pr-75'></i>Aktivitas Karyawan
-                                            </h4>
-                                            <table class="table" id="table-activity" style="width: 100%;">
-                                                <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama Karyawan</th>
-                                                    <th>Indikator</th>
-                                                    <th>Aktivitas</th>
-                                                    <th>Tanggal</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                                <tfoot>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama Karyawan</th>
-                                                    <th>Indikator</th>
-                                                    <th>Aktivitas</th>
-                                                    <th>Tanggal</th>
-                                                </tr>
-                                                </tfoot>
-                                            </table>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Data Kinerja Karyawan</h4>
+                                        </div>
+                                        <div class="card-body card-dashboard">
+                                            <p class="card-text">
+                                                Data Kinerja Karyawan
+                                            </p>
+                                            <div class="table-responsive">
+                                                <table class="table" id="table-activity">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No Karyawan</th>
+                                                        <th>Nama</th>
+                                                        <th>Indikator</th>
+                                                        <th>Deskripsi Pekerjaan</th>
+                                                        <th>Tanggal</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <th>No Karyawan</th>
+                                                        <th>Nama</th>
+                                                        <th>Indikator</th>
+                                                        <th>Deskripsi Pekerjaan</th>
+                                                        <th>Tanggal</th>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
