@@ -68,6 +68,8 @@ Route::middleware('auth')->group(function(){
     //indicator
     Route::get('/employee-indicator', [App\Http\Controllers\Employee\ProgressWorkController::class, 'indicatorData']);
 
+    //employee-profile
+    Route::get('/employee-profile/{employee_id}', [App\Http\Controllers\Employee\ProgressWorkController::class, 'editProfile']);
 
     //employee-subordinate-performance
     Route::get('/employee-subordinate-performance', [App\Http\Controllers\Employee\SubordinatePerformanceController::class, 'index']);

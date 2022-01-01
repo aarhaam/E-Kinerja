@@ -43,7 +43,9 @@
                                                                     <li class="nav-item mb-0">
                                                                         <a class="nav-link d-flex px-1" id="friends-tab" data-toggle="tab" href="#friends" aria-controls="friends" role="tab" aria-selected="false"><i class="bx bx-book-content"></i><span class="d-none d-md-block"> Indikator</span></a>
                                                                     </li>
-
+                                                                    <li class="nav-item mb-0">
+                                                                        <a class="nav-link d-flex px-1" id="editProfile" href="#" aria-controls="friends" role="tab" aria-selected="false"><i class="bx bx-user-pin"></i><span class="d-none d-md-block"> Edit Profil</span></a>
+                                                                    </li>
                                                                 </ul>
                                                             </div>
 {{--                                                            <button class="btn btn-sm d-none d-sm-block float-right btn-light-primary">--}}

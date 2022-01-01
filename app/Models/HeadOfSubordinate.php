@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class HeadOfSubordinate extends Model
 {
+    protected $primaryKey = 'id';
     protected $table = 'head_of_subordinates';
     use HasFactory;
     protected $fillable = [

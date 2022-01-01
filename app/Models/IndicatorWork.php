@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class IndicatorWork extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
     protected $fillable = [
         'employee_id', 'name_indicator'
     ];

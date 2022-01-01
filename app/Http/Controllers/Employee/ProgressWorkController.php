@@ -143,6 +143,12 @@ class ProgressWorkController extends Controller
         }
     }
 
+    public function editProfile($employee_id)
+    {
+        $profile = User::findOrFail($employee_id);
+        return response()->json($profile);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

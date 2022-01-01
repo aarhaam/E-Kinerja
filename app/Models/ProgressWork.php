@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProgressWork extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
     protected $fillable = [
         'employee_id', 'indicator_id', 'description', 'date', 'grade'
     ];
