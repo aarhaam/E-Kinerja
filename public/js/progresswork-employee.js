@@ -6,7 +6,7 @@ $(document).ready(function(){
     });
 
     //tab activity
-    $('#table-progress').DataTable({
+    var tableProgress = $('#table-progress').DataTable({
         responsive : true,
         processing : true,
         ajax : '/employee-activity',
@@ -48,6 +48,13 @@ $(document).ready(function(){
         ]
     });
 
+    $(document).ready(function () {
+        $('#filter-date-work').on('change', function () {
+            let selectedDate = $('#filter-date-work').val();
+            tableProgress.search(selectedDate).draw()
+        })
+    })
+
     $('#addActivity').click(function(){
         $('#modalInput').modal('show');
     });
@@ -55,6 +62,7 @@ $(document).ready(function(){
     $(document).on('click', '#close-button', function (e) {
         e.preventDefault();
 
+        $('#id').val('');
         $('#formProgressWork').trigger("reset");
         $("#modalInput").trigger("reset");
         $("#modalInput").modal("hide");

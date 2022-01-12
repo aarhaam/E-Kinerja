@@ -45,9 +45,7 @@
                                         <table class="table" id="table-subordinate">
                                             <thead>
                                             <tr>
-                                                <th>No Karyawan</th>
                                                 <th>Nama</th>
-                                                <th>Email</th>
                                                 <th>Jabatan</th>
                                                 <th>Aksi</th>
                                             </tr>
@@ -56,9 +54,7 @@
                                             </tbody>
                                             <tfoot>
                                             <tr>
-                                                <th>No Karyawan</th>
                                                 <th>Nama</th>
-                                                <th>Email</th>
                                                 <th>Jabatan</th>
                                                 <th>Aksi</th>
                                             </tr>

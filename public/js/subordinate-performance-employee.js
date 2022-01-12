@@ -11,9 +11,7 @@ $(document).ready(function(){
         processing: true,
         ajax: "/subordinate-performance-data",
         columns: [
-            {"data" : "subordinate[0].employee_id"},
             {"data" : "subordinate[0].name"},
-            {"data" : "subordinate[0].email"},
             {"data" : "subordinate[0].occupation"},
             {"data" : "subordinate[0].employee_id",
                 render: function(data, type, row) {

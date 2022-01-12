@@ -28,9 +28,11 @@ class ProgressWorkController extends Controller
     {
         $head = HeadOfSubordinate::where('head', '=', Auth::user()->employee_id)->first();
         $indicator = IndicatorWork::where('employee_id', '=', Auth::user()->employee_id)->get();
+        $filterDate = DB::table('progress_works')->where('employee_id', '=', Auth::user()->employee_id)->get();
         return view('employee.progress-work', [
             'data' => $indicator,
-            'head' => $head
+            'head' => $head,
+            'dataDate' => $filterDate
         ]);
     }
 

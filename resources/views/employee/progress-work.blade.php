@@ -73,6 +73,10 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h5>Aktivitas</h5>
+                                                    <br>
+                                                    <label for="filter-date">Filter Tanggal Pekerjaan</label>
+                                                    <input type="date" class="form-control" id="filter-date-work"/>
+                                                    <br>
                                                     <button class="btn btn-primary" id="addActivity">Tambah Aktivitas</button>
                                                     <!-- timeline start -->
                                                     <table class="table" id="table-progress">
